@@ -1,0 +1,34 @@
+import { Menu } from '@headlessui/react'
+
+function MyDropdown() {
+  return (
+    <Menu>
+      <Socials.Button>More</Socials.Button>
+      <Socials.Items>
+        <Socials.Item>
+          {({ active }) => (
+            <a
+              className={`${active && 'bg-blue-500'}`}
+              href="/account-settings"
+            >
+              Account settings
+            </a>
+          )}
+        </Socials.Item>
+        <Socials.Item>
+          {({ active }) => (
+            <a
+              className={`${active && 'bg-blue-500'}`}
+              href="/account-settings"
+            >
+              Documentation
+            </a>
+          )}
+        </Socials.Item>
+        <Socials.Item disabled>
+          <span className="opacity-75">Invite a friend (coming soon!)</span>
+        </Socials.Item>
+      </Socials.Items>
+    </Socials>
+  )
+}
